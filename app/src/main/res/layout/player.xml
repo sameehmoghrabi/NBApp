@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/poster"
+        android:layout_width="100dp"
+        android:layout_height="125dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:inputType="none"
+        android:text="First Name :"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/poster"
+        app:layout_constraintTop_toTopOf="@+id/poster" />
+
+    <TextView
+        android:id="@+id/firstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:inputType="none"
+        android:text="First Name"
+        app:layout_constraintBaseline_toBaselineOf="@+id/fn"
+        app:layout_constraintStart_toEndOf="@+id/fn"
+        tools:editable="false" />
+
+    <TextView
+        android:id="@+id/ln"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:inputType="none"
+        android:text="Last Name :"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/fn"
+        app:layout_constraintTop_toBottomOf="@+id/fn" />
+
+    <TextView
+        android:id="@+id/lastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:inputType="none"
+        android:text="Last Name"
+        app:layout_constraintBaseline_toBaselineOf="@+id/ln"
+        app:layout_constraintStart_toEndOf="@+id/ln" />
+
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:inputType="none"
+        android:text="Player ID :"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/poster"
+        app:layout_constraintStart_toStartOf="@+id/stat"
+        app:layout_constraintTop_toBottomOf="@+id/stat" />
+
+    <TextView
+        android:id="@+id/playerID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:inputType="none"
+        android:text="Player ID"
+        app:layout_constraintBaseline_toBaselineOf="@+id/id"
+        app:layout_constraintStart_toEndOf="@+id/id" />
+
+    <TextView
+        android:id="@+id/stat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:inputType="none"
+        android:text="Status :"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/ln"
+        app:layout_constraintTop_toBottomOf="@+id/ln" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:inputType="none"
+        android:text="Status"
+        app:layout_constraintBaseline_toBaselineOf="@+id/stat"
+        app:layout_constraintStart_toEndOf="@+id/stat" />
+
+</android.support.constraint.ConstraintLayout>
