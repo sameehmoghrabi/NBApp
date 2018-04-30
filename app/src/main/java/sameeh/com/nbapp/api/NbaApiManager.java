@@ -3,10 +3,12 @@ package sameeh.com.nbapp.api;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.util.ArrayList;
+
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import sameeh.com.nbapp.Models.TeamPlayersList;
+import sameeh.com.nbapp.Models.Player;
 
 /**
  * Created by samee on 4/30/2018.
@@ -29,7 +31,7 @@ public class NbaApiManager {
         nbaApi = retrofit.create(NbaApi.class);
     }
 
-    public Call<TeamPlayersList> getTeamPlayers (String teamID){
+    public Call<ArrayList<Player>> getTeamPlayers (String teamID){
         return nbaApi.getTeamPlayers(teamID);
     }
 

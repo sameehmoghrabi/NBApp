@@ -19,7 +19,7 @@ public class Player  implements Serializable{
     @SerializedName("status")
     private String status;
 
-    @SerializedName("playerID")
+    @SerializedName("playerId")
     private String playerID;
 
  //   private String imageURL ;
@@ -48,7 +48,18 @@ public class Player  implements Serializable{
         return playerID;
     }
 
-  //  public String getImageURL() {
+    public String getimageURL() {return "https://nba-players.herokuapp.com/players/"+lastName+"/"+firstName; }
+
+    @Override
+    public String toString() {
+        return "Player{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", status='" + status + '\'' +
+                ", playerID='" + playerID + '\'' +
+                '}';
+    }
+//  public String getImageURL() {
    //     return imageURL;
    // }
 }

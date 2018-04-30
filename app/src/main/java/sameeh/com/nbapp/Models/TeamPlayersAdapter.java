@@ -1,11 +1,14 @@
 package sameeh.com.nbapp.Models;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +32,20 @@ public class TeamPlayersAdapter extends RecyclerView.Adapter<TeamPlayersAdapter.
 
     @Override
     public void onBindViewHolder(TeamPlayersAdapter.ViewHolder holder, int position) {
+
+        Player player = teamPlayers.get(position);
+        Context context = holder.itemView.getContext();
+
+        holder.firstName.setText(player.getFirstName());
+        holder.lastName.setText(player.getLastName());
+        holder.status.setText(player.getStatus());
+        holder.playerID.setText(player.getPlayerID());
+
+        String imageURL = player.getimageURL();
+        Picasso.with(context).load(imageURL).into(holder.poster);
+
+        if(holder.poster.getDrawable() == null)
+            holder.poster.setImageResource(R.drawable.unknown_player);
 
     }
 
