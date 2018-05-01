@@ -20,7 +20,7 @@ import sameeh.com.nbapp.Models.Player;
 import sameeh.com.nbapp.R;
 import sameeh.com.nbapp.api.NbaApiManager;
 
-public class MainActivity extends AppCompatActivity {
+public class SearchTeamActivity extends AppCompatActivity {
 
     private final int REQUEST_CODE = 100;
     public static final String PLAYERS_RESULT_KEY = "PLAYERS_RESULT_KEY";
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_search_team);
 
         nbaApiManager = new NbaApiManager();
         teamIdEditText = findViewById(R.id.teamID);

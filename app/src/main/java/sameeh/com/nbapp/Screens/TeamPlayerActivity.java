@@ -27,10 +27,10 @@ public class TeamPlayerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_team_players_);
+        setContentView(R.layout.activity_team_players);
 
         Intent i = getIntent();
-        teamPlayersList = (ArrayList<Player>) i.getSerializableExtra(MainActivity.PLAYERS_RESULT_KEY);
+        teamPlayersList = (ArrayList<Player>) i.getSerializableExtra(SearchTeamActivity.PLAYERS_RESULT_KEY);
         Log.d("TAG", "onCreate: "+teamPlayersList);
         teamPlayersRecyclerView = findViewById(R.id.teamPlayers);
         teamPlayersRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -51,7 +51,7 @@ public class TeamPlayerActivity extends AppCompatActivity {
         int id = item.getItemId();
         switch (id) {
             case R.id.teams:
-                Intent intent = new Intent(this, MainActivity.class);
+                Intent intent = new Intent(this, SearchTeamActivity.class);
                 startActivityForResult(intent, REQUEST_CODE);
                 return true;
             default:

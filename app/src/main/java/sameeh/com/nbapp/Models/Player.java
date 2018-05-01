@@ -10,6 +10,9 @@ import java.io.Serializable;
 
 public class Player  implements Serializable{
 
+    @SerializedName("_id")
+    private String id;
+
     @SerializedName("firstName")
     private String firstName;
 
@@ -22,14 +25,11 @@ public class Player  implements Serializable{
     @SerializedName("playerId")
     private String playerID;
 
- //   private String imageURL ;
-
     public Player(String firstName, String lastName, String status, String playerID) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.status = status;
         this.playerID = playerID;
-   //     imageURL = "https://nba-players.herokuapp.com/players/"+lastName+"/"+firstName;
     }
 
     public String getFirstName() {
@@ -50,6 +50,8 @@ public class Player  implements Serializable{
 
     public String getimageURL() {return "https://nba-players.herokuapp.com/players/"+lastName+"/"+firstName; }
 
+    public String getId() { return id; }
+
     @Override
     public String toString() {
         return "Player{" +
@@ -59,7 +61,4 @@ public class Player  implements Serializable{
                 ", playerID='" + playerID + '\'' +
                 '}';
     }
-//  public String getImageURL() {
-   //     return imageURL;
-   // }
 }

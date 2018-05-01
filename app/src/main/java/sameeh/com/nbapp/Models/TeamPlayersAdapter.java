@@ -42,7 +42,8 @@ public class TeamPlayersAdapter extends RecyclerView.Adapter<TeamPlayersAdapter.
         holder.playerID.setText(player.getPlayerID());
 
         String imageURL = player.getimageURL();
-        Picasso.with(context).load(imageURL).into(holder.poster);
+
+        Picasso.get().load(imageURL).into(holder.poster);
 
         if(holder.poster.getDrawable() == null)
             holder.poster.setImageResource(R.drawable.unknown_player);

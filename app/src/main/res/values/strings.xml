@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">NBApp</string>
+
+    <string name="hint_name">name</string>
+    <string name="hint_email">email</string>
+    <string name="hint_address">address</string>
+    <string name="hint_password">password</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_submit">Submit</string>
+
+    <string name="text_register">Register</string>
+    <string name="register_btn">Register</string>
+
+    <string name="text_guest">Guest</string>
+    <string name="fname">First Name</string>
+    <string name="lname">Last Name</string>
+    <string name="age">Age</string>
+    <string name="playerID">Player ID</string>
+
+
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="title_player">Players</string>
+    <string name="title_create_player">Create Player</string>
+    <string name="title_profile">Profile</string>
+
 </resources>
